@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box;
+    border:dashed; */
+    }
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Arima Madurai', cursive;
+}
+/* the main container */
+
+.card{
+ width:70%;
+ height:100%;
+  margin: 3em auto;
+  overflow: hidden;
+  box-shadow: 2px 5px 15px 0px #17161694;
+  background-color:rgb(255, 255, 255);
+  border-radius: 25px;
+}
+
+#front-card{
+  background-image: url('assets/business-card-pencil-hand.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+}
+
+.signature-lward {
+  margin-left: 5%;
+  margin-top: %
+}
+
+.front-text {
+  margin-top: 10%
+}
+
+h1{
+  font-size: 40pt
+}
+
+h2{
+  font-size: 60pt
+}
+
+ 
+#back-card {
+  background-image: url('assets/Zipper\ Simplified.jpg.svg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 900px; 
+}
+h1{
+  /* to left align text */
+  font-size: 60pt;
+  margin-top: 11%;
+  font-family:'Arima Madurai', cursive;
+}
+
+.back-text {
+  margin-top: -8%;
+  margin-left: 5%;
+}
+
+.illustrator {
+  margin-top: 20%;
+  margin-left: 5%;
+}
+
+h2{
+  font-size: 30pt;
+  font-family:'Arima Madurai', cursive;
+}
+
+h3{
+  font-size: 40pt;
+  font-family:'Arima Madurai', cursive;
+}
+
+h4{
+  font-size: 20pt;
+  font-family:'Arima Madurai', cursive;
+}
+
+h5{
+  font-size: 15pt;
+  font-family:'Arima Madurai', cursive;
+}
+
+h6{
+  font-size: 15pt;
+  font-family:'Arima Madurai', cursive;
+}
+
+.back-card-2{
+  margin-top: 2.5%;
+  margin-left: 13%;
+}
+
+.icon-container{
+  /* grid-row-gap: */
+  width: 40%;
+  margin-top: -15%;
+  margin-left: 18%;
+  /*what enables the use of css grid */
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 5fr 5fr; 
+}.card {
+     width: 10%
+  /*width:400px*/
+  /*height:750px*/
+}
+
+.text-container {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: repeat(6,100px);
+  grid-template-rows: repeat(2,100px);
+}
+
+svg{
+  fill:rgb(0, 0, 0);
+  width:auto
+}
+  /*margin: 0 auto*/
+svg:hover{
+  fill:rgb(196, 141, 241);
+  animation: animate__heartBeat;
+  animation-duration: 2s;
+}
+
+<div>
+  <svg></svg>
+
+
+
+</div>
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color:rgb(117, 168, 189)
+  }
+  .card{
+    width:75%;
+    /*width:400px; */
+  /* height:750px; */
+  }
+}
+
+@media only screen and (min-width:600px) {
+  body {
+    background-color: silver;
+  }
+  .card{
+    width:75%;
+    /*width:400px; */
+    /*height:750px; */
+  }
+}
+
+/* a different version of the grid that is activated on devices 1200px or wider (most tablets and desktop devices*/
+@media only screen and (min-width: 1200px) {
+  body {
+ 
+    .container{
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 7.5% 40% 5% 40% 7.5%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+        ". . . . ."
+        ". f . b ."
+        ". . . . .";
+
+}
+} 
+
