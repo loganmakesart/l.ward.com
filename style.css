@@ -274,9 +274,9 @@ nav{
 
 .logo-svg {
     margin-top: -50px;
-    width: 700px;
+    width: 800px;
     grid-area: logo;
-    margin-left: -210px;
+    margin-left: -150px;
 }
 
 .contact-wrapper {
