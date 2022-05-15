@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: dashed blue 1px; */
+}
+
+h4{
+  font-family: 'Indie Flower', cursive;
+  font-size: 12pt;
+  text-decoration: none;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* LWard Logo */
+.lineAnimation{
+  position: left;
+}
+
+#logo-animation {
+  fill:rgba(255, 255, 255, 0);
+  stroke:#ffffffd2;
+  height:120px;
+  width:150px;
+  margin-top:-39px;
+  stroke-width: 6px;
+  stroke-miterlimit:50;
+  stroke-dasharray: 1000;
+  stroke-dashoffset:0;
+  -webkit-animation: dash 8s ease infinite;
+  -o-animation: dash 8s ease infinite;
+  -moz-animation: dash ease linear infinite;
+  animation: dash 8s ease infinite;
+}
+
+@-webkit-keyframes blink {
+  0%, 100%{
+  opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    }
+  }
+@-webkit-keyframes dash {
+0%, 100%{
+stroke-dashoffset: 3999;
+}
+50% {
+stroke-dashoffset:2000;
+
+  }
+}
+
+
+/* NAVBAR CSS */
+
+.train-container{
+  width:100%
+}
+
+
+/* IMAGE GALLERY CSS */
+.image-gallery-opening {
+  height: 200px;
+}
+
+.image-gallery {
+    height: 100%;
+    object-fit: contain;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding-bottom: 100px;
+    grid-template-areas:
+    ". a b c ."
+    ;
+}
+
+.box-styling {
+  max-width: 100%;
+    max-height: 100%;
+    background-color: rgb(194, 194, 194);
+  }
+
+.box-wrapper{
+  height:330px;
+  width: 330px;
+  border-radius: 0%;
+}
+
+.box1 {
+    grid-area: a;
+}
+
+.box2 {
+    grid-area: b;
+}
+
+.box3 {
+    grid-area: c;
+}
+
+img.overlay{
+  filter: brightness(20%);
+}
+
+h2 {
+  font-size: 35px;  
+  font-weight: 400;
+  color:rgb(236, 209, 183);
+  position:relative;
+  top: 30%;
+  right: 0%;
+  font-family: 'Work Sans', sans-serif;
+  background-color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  margin: 0;
+  text-transform: uppercase;
+
+}
+
+p {
+  font-size:14px;
+  font-weight: 200;
+  color:rgb(236, 209, 183);
+  position: relative;
+  top: 30%;
+  width:80%;
+  right:0%;
+  font-family: 'Work Sans', sans-serif;
+  background-color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+   /* footer section */
+   #footer{
+    grid-area:footer;
+  }
+  footer p{
+    font-size:2em;
+  }
+  footer li {
+    display:inline;
+  }
+  footer ul {
+    max-width: 650px;
+    margin: 2em auto;
+    padding:0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li{
+    list-style: none;
+    align-self:flex-end;
+  }
+  footer ul li a {
+    color:rgb(1, 150, 150);
+    transition: .3s;
+  }
+  footer ul li a:hover {
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+  }
+  footer svg {
+    width:20%;
+  }
+  footer p{
+    font-size: 1em;
+  }
+
+
+
+  /* MEDIA QUERY FOR LAPTOP SCREENS ***********************************************************************************/
+ @media only screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) {
+      
+      nav ul {
+        display:flex;
+      }
+      nav li{
+        list-style-type: none;
+        font-size: 40px;
+        font-family: 'Indie Flower', cursive;
+        text-decoration: none;
+      }
+    
+      #nav {
+    width: 100%;
+    gap: 150px;
+ }
+
+  nav{
+    position: sticky; 
+    display:flex;
+    top:0; /* At the top */
+    z-index: 99;
+    width:100%;
+    gap: 150px;
+    height: 70px;
+    white-space: nowrap;
+    list-style-type:none;  /* Gets rid of formatting from li */
+    background-color: rgba(0, 0, 0, 0.746);
+  }
+
+
+ nav li a:hover {
+  color:rgb(233, 144, 61);
+  opacity: 1;
+  text-decoration: none;
+  display: block;
+  block-size: 50px;
+}
+
+nav li a {
+  color:rgb(1, 150, 150);
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav li a:hover,
+nav li a.active {
+  color:rgb(255, 255, 255);
+  opacity: 1;
+  background: #f79e2b;
+  transition: all 0.5 ease;
+  border-radius: 4px;
+}
+
+ #train {
+  width: 95%;
+  height: 95%;
+  margin-top: 0px;
+  position:right;
+  margin-left: 75px;
+  margin-top:-60px;
+}
+
+ .nav-container{
+  margin-top:6px;
+  display: flex;
+  position: center;
+  gap: 120px;
+  width: 100%;
+  margin-left: 3%;
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  padding-block-start: 3px;
+  padding-block-end: 3px;
+}
+  
+    #image-gallery {
+      padding-bottom: 0px;
+        margin-bottom: 600px;
+        grid-template-columns: 1fr minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+        grid-template-areas:
+        ". a b ."
+        ". c d ."
+        ". e f ."
+        ;
+    }
+
+      /* ABOUT ME CSS LAPTOP*/
+      h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26pt;
+        text-decoration:none;
+      }
+
+      .about-me {
+        width: fit-content;
+        height: 100vh !important;
+        background-color: rgb(255, 255, 255) !important;
+        padding: 10vh 50px 0 50px;
+        column-count: 2;
+      }
+
+      .about-me img{
+      width: 51%;
+      height: 76%;
+      margin-top:48px;
+      border-radius: 49%;
+      margin-bottom: 4em;
+      margin-left: 90px;
+      }
+
+      .about-me p{
+      text-align: left;
+      font-size:20px;
+      margin-left: -40px;
+      margin-top:50px;
+      }
+
+      h5{
+        font-family: 'Montserrat', sans-serif;
+        text-decoration:none;
+        font-size: 14pt;
+        font-style:none;
+      }
+
+      h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18pt;
+        color: rgb(1, 150, 150);
+        text-decoration:none;
+      }
+
+/* CONTACT CSS LAPTOP */
+
+
+      h3{
+        font-family: 'Indie Flower', cursive;
+        font-size: 12pt;
+        color: rgb(1, 150, 150);
+      }
+
+ }
+
+ 
+/* the span tag that wrap starts off my paragraph */
+.bigText {
+  font-size:2em;
+  padding-right:.5em;
+}
+
+/* CONTACT CSS  LAPTOP*/
+.contact {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+    height: 30vh !important;
+    padding-bottom: 50vh;
+    background-color: rgb(255, 255, 255) !important;
+    grid-template-columns: 3fr minmax(2fr, 1fr) minmax(2fr, 1fr) 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". title title ."
+    ". logo wrapper ."
+    ;
+}
+
+.contact-title {
+    font-size: 2em;
+    grid-area: title;
+    padding-bottom: 50px;
+}
+
+.logo-svg {
+    margin-top: 20px;
+    width: 800px;
+    grid-area: logo;
+    margin-left: -150px;
+}
+
+.contact-wrapper {
+    grid-area: wrapper;
+}
+
+
+
+/* MEDIA QUERY FOR MOBILE ***********************************************************************************************/
+ @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 812px) {
+    
+
+      nav ul {
+        display:flex;
+      }
+      nav li{
+        margin-top: 3.2%;
+        font-size: 15px;
+        list-style-type: none;
+        font-family: 'Indie Flower', cursive;
+        text-decoration: none;
+      }
+
+      
+     nav{
+      position: sticky; 
+      top:0; /* At the top */
+      z-index: 99;
+      gap: 100px;
+      height: 45px;
+      white-space: nowrap;
+      list-style-type:none;  /* Gets rid of formatting from li */
+      background-color: rgba(0, 0, 0, 0.746);
+    }
+
+     .nav-container{
+      display: flex;
+      gap: 5px;
+      margin-left: 5%;
+      transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    }
+
+    #logo-animation{
+      max-width: 60px;
+    }
+
+    nav li a:hover {
+      color:rgb(233, 144, 61);
+      opacity: 1;
+      text-decoration: none;
+      display: block;
+      block-size: 20px;
+      padding:0;
+      margin:0;
+      outline:0;
+    }
+
+
+  nav li a {
+    color:rgb(1, 150, 150);
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+  }
+
+  nav li a:hover,
+  nav li a.active {
+    color:rgb(255, 255, 255);
+    opacity: 1;
+    background: #f79e2b;
+    border-radius: 4px;
+  }
+  
+
+   #train {
+      margin-top: 50%;
+      position:right;
+
+    }
+
+    .image-gallery.content.regular-wrapper {
+        min-width: none;
+        max-width: 812px;
+        margin-left: 8%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        ;
+    }
+/* ABOUT ME CSS MOBILE */
+    h1{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22pt;
+      text-decoration:none;
+    }
+
+    #aboutme {
+      width: fit-content;
+      height: 150vh !important;
+      padding: 10vh 50px 0 50px;
+      column-count: 1;
+      /* font-size: 10px; */
+    }
+    
+
+    #logan-portrait.image {
+      width: 90%;
+      margin-top:18px;
+      border-radius: 50%;
+      margin-bottom: 4em;
+      margin-left: 5%;
+    }
+    
+    .about-me p{
+      text-align: left;
+    }
+    h5{
+      font-family: 'Montserrat', sans-serif;
+      text-decoration:none;
+      font-size: 10pt;
+      font-style:none;
+    }
+    h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12pt;
+      color: rgb(1, 150, 150);
+      text-decoration:none;
+    }
+
+/* CONTACT CSS MOBILE */
+
+    #contact {
+        display: grid;
+        justify-items: left;
+        align-items: left;
+        text-decoration: none;
+        height: 30vh !important;
+        padding-bottom: 50vh;
+        background-color: rgb(255, 255, 255) !important;
+        grid-template-areas:
+        "logo . "
+        "wrapper ."
+        "wrapper ."
+        ;
+    }
+
+    #contact.contact.content.regular-wrapper {
+      padding: 1;
+      margin: 0;
+    }
+
+    .contact-title {
+      font-size: 10px;
+      grid-area: wrapper;
+  }
+    
+    .contact-wrapper {
+      grid-area: wrapper;
+    }
+    
+    .logo-svg {
+      margin-top: 60px;
+      width: 320px;
+      grid-area: logo;
+      margin-left: 0px;
+  }
+
+  h3{
+    font-family: 'Indie Flower', cursive;
+    font-size: 8pt;
+    color: rgb(1, 150, 150);
+  }
+
+
+
+
+
+
+ }
+
+
+
